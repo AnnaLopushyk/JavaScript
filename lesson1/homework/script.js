@@ -174,7 +174,7 @@ let task5 = 10==10;
 console.log(task5);
 
 let task6 = 10!=10;
-console.log(task5);
+console.log(task6);
 
 let task7 = 10>10;
 console.log(task7);
