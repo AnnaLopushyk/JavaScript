@@ -4,9 +4,17 @@
 //     Також потрібно врахувати коли введені рівні числа.
 
 
-
-
-
+let number1 = +prompt('Vvedit chyslo')
+let number2 = +prompt('Vvedit che 1 chyslo dlya porivnannja')
+if (number1>number2) {
+    console.log('максимальне число '+ number1)
+} else if (number2>number1) {
+    console.log('максимальне число '+ number2)
+} else if (number1===number2) {
+    console.log('числа рівні')
+} else  {
+    console.log('некоректні дані')
+}
 
 //- У першому під'їзді квартири з 1 до 20. У другому з 21 по 48. У третьому з 49 по 90.
 // Користувач вводить номер квартири просто в змінні або через prompt('') .
