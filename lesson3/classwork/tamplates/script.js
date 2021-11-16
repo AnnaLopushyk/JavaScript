@@ -55,12 +55,11 @@ let simpsons = [
 
 
 for (let i=0; i<simpsons.length; i++) {
-        document.write
-        (`<div class="box"> 
-            <h3>${simpsons[i].name}</h3> 
-                ${simpsons[i].surname} 
-                ${simpsons[i].age} -
-                ${simpsons[i].info}
-        </div>`);
+        document.write (`<div class="box"> 
+            <h3>${simpsons[i].name} -  ${simpsons[i].surname}</h3> 
+                ${simpsons[i].age + 'year'} <br>-
+                ${simpsons[i].info}<br>
+                (<img src="${simpsons[i].photo}" alt="1">);
+        </div>`)
 }
 
