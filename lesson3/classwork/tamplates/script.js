@@ -59,7 +59,7 @@ for (let i=0; i<simpsons.length; i++) {
             <h3>${simpsons[i].name} -  ${simpsons[i].surname} (${simpsons[i].age + 'year'})</h3> 
                  <br>
                 ${simpsons[i].info}<br>
-                <img src="${simpsons[i].photo}" alt="1">
+                <img class="image" src="${simpsons[i].photo}" alt="1">
         </div>`)
 }
 
