@@ -1,13 +1,13 @@
 
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону template1.1
-//
-let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-document.write(`<ul>`);
-for (i=0; i<listOfItems.length;i++) {
-    document.write(`<li>${listOfItems[i]}</li>`);
-}
-document.write(`</ul>`)
+
+// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+// document.write(`<ul>`);
+// for ( let i=0; i<listOfItems.length;i++) {
+//     document.write(`<li>${listOfItems[i]}</li>`);
+// }
+// document.write(`</ul>`)
 
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону template2.1 & template2.2. Зробити адекватну стилізацію.
@@ -54,12 +54,86 @@ let simpsons = [
 ];
 
 
-for (let i=0; i<simpsons.length; i++) {
-        document.write (`<div class="box"> 
-            <h3>${simpsons[i].name} -  ${simpsons[i].surname} (${simpsons[i].age + 'year'})</h3> 
-                 <br>
-                ${simpsons[i].info}<br>
-                <img class="image" src="${simpsons[i].photo}" alt="1">
-        </div>`)
-}
+<!--template 2.1-->
+// <div>
+//     NAME- SURNAME- AGE- INFO- <img src="PHOTO" alt="">
+// </div>
 
+//
+//template 2.1
+
+// for (let i=0; i<simpsons.length; i++) {
+//     document.write
+//     (`<div xmlns="http://www.w3.org/1999/html">
+//             <strong class="page">${simpsons[i].name}
+//             ${simpsons[i].surname}</strong>
+//             (${simpsons[i].age + 'year'})-
+//              ${simpsons[i].info}<br>
+//              <img src="${simpsons[i].photo}" alt="1">
+//         </div>`)
+// }
+
+//template 2.2
+// for (let i=0; i<simpsons.length; i++) {
+//         document.write (`<div class="box" xmlns="http://www.w3.org/1999/html">
+//             <h2>${simpsons[i].name} -  ${simpsons[i].surname} (${simpsons[i].age + 'year'})</h2>
+//                  <br>
+//                 <p class="text">${simpsons[i].info}</p>
+//                 <img class="image" src="${simpsons[i].photo}" alt="1">
+//         </div>`)
+// }
+//
+
+
+
+/*Використовуючи данні з масиву, за допомоги document.write та циклу
+побудувати структуру по шаблону template3.1 Зробити адекватну стилізацію
+ Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
+ */
+
+let products = [
+    {
+        title: 'milk',
+        price: 22,
+        image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+    },
+    {
+        title: 'juice',
+        price: 27,
+        image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+    },
+    {
+        title: 'tomato',
+        price: 47,
+        image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+    },
+    {
+        title: 'tea',
+        price: 15,
+        image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+    },
+];
+
+//
+// <!--        template 3.1-->
+// <div>
+//     <div class="product-card">
+//         <h3 class="product-title">TITLE. Price - PRICE</h3>
+//         <img src="" alt="" class="product-image">
+//     </div>
+//     <!--
+//                 інші об'єкти з масиву
+//                 ...
+//                 ...
+//                 ...
+//     -->
+//
+// </div>
+
+document.write(`<div`);
+    for (let product of products) {
+            document.write(`<div class="product_card">`);
+            document.write(`<h3 class="product_title">  ${product.title} <br> ${product.price} </h3>`);
+            document.write(`<img src="${product.image}" alt="${product.title}" class="product_image">`);
+    }
+document.write(`</div>`)

@@ -57,20 +57,20 @@ while (k<=20) {
 //- Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
 
 let numArr =[11,12,13,14,15,16,17,18,19,20];
-for (i=0; i<numArr.length; i++) {
+for (let i=0; i<numArr.length; i++) {
       console.log(numArr[i]);
   }
 
 //- Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
 
 let textArr = ['one','book','page','author','day', 'month', 'season','value','price'];
-for (i=0; i<textArr.length; i++) {
+for (let i=0; i<textArr.length; i++) {
     console.log(textArr[i])
 }
 
 //- Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
 let arrAll = [ 'box','two', true, 2, false,'main','okten',50,[2],25.5];
-for (i=0; i < arrAll.length; i++) {
+for (let i=0; i < arrAll.length; i++) {
     console.log(arrAll[i])
 }
 
@@ -78,7 +78,7 @@ for (i=0; i < arrAll.length; i++) {
 // За допомогою if та typeof вивести тільки булеві елементи
 
 let contain = [20,40,50,'one',true,1.25,'truth', false,'winter','cold'];
-for (i=0; i<contain.length; i++) {
+for (let i=0; i<contain.length; i++) {
     if (typeof contain[i] ==="boolean")
         console.log(contain[i])
 }
@@ -87,7 +87,7 @@ for (i=0; i<contain.length; i++) {
 // За допомогою if та typeof вивести тільки числові елементи
 
 let box = [25,'weather',45, 50,'one',true,1.25,'truth', false,'winter'];
-for (i=0; i<box.length; i++) {
+for (let i=0; i<box.length; i++) {
     if (typeof box[i] === 'number')
         console.log(box[i])
 }
@@ -96,7 +96,7 @@ for (i=0; i<box.length; i++) {
 // За допомогою if та typeof вивести тільки рядкові елементи
 
 let row = ['list','item',45, 50,'one',true,[array],'truth', false,'winter'];
-for (i=0; i<row.length; i++) {
+for (let i=0; i<row.length; i++) {
     if (typeof row[i] === 'string')
         console.log(row[i])
 }
@@ -117,7 +117,7 @@ emptyArr[7]= false;
 emptyArr[8]= 'school';
 emptyArr[9]=100;
 
-for (i=0; i<emptyArr.length; i++) {
+for (let i=0; i<emptyArr.length; i++) {
     console.log(emptyArr[i])
 }
 

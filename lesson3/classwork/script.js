@@ -17,8 +17,7 @@ for (let i =0; i < array.length; i++) {
 
 
 // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
-
-i=0;
+ i=0;
 while (i<array.length) {
     if (i%2 !==0 ) {
         console.log(array[i]);
@@ -33,7 +32,7 @@ for (i=0; i< array.length; i++) {
 }
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
 
-i=0;
+ i=0;
 while (i<array.length) {
 if (i%2 ===0) {
     console.log(array[i]);
@@ -42,18 +41,19 @@ i++
 }
 
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
-for (i=0; i<array.length; i++) {
+for (let i=0; i<array.length; i++) {
     if (i%2===0) {
         console.log(array[i]);
     }
 }
 
 // 7. замінити кожне число кратне 3 на слово "okten"
-for (i=0; i<array.length; i++) {
+for (let i=0; i<array.length; i++) {
     if (array[i]%3===0) {
         array[i]='okten'
-        console.log(array[i])
+
     }
+    console.log(array[i])
 }
 
 
@@ -77,7 +77,7 @@ for (let i = array.length-1; i>=0; i--) {
 }
 // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
 
-i=array.length-1;
+ i=array.length-1;
 while (i>=0) {
     if (i % 2 !== 0) {
         console.log(array[i])
@@ -88,7 +88,7 @@ while (i>=0) {
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
 for (let i = array.length-1; i>=0; i--) {
     if (i%2 !==0) {
-        console.log(array[i])
+        console.log(array[i]);
     }
 }
 
@@ -96,23 +96,24 @@ for (let i = array.length-1; i>=0; i--) {
 i = array.length-1;
 while (i>=0) {
     if( i % 2 === 0) {
-        console.log(array[i])
+        console.log(array[i]);
     }
     i--
 }
 
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
 
-for(i=array.length-1; i>=0; i--) {
+for(let i=array.length-1; i>=0; i--) {
     if (i % 2 ===0) {
         console.log(array[i])
     }
 }
 
 // 7. замінити кожне число кратне 3 на слово "okten"
-for(i=array.length; i>=0; i--) {
+for(let i=array.length; i>=0; i--) {
     if (array[i]% 3 ===0) {
         array[i]='okten';
-        console.log(array[i])
+
     }
+    console.log(array[i]);
 }
