@@ -90,17 +90,24 @@ buildList(arr)
 // Для кожного об'єкту окремий блок.
 let arrayField = [
     {   id:1,
-        name:Anna,
+        name:'Anna',
         age:30
     },
     {   id:2,
-        name:Olya,
+        name:'Olya',
         age:32
     },
     {   id:3,
-        name:Vasya,
+        name:'Vasya',
         age:35
     }
 ]
 
-// function createDoc()
+function createDoc(objects) {
+    for (let key of arrayField ) {
+        document.write(`<div>`);
+        document.write(`${key.id}. ${key.name}: ${key.age + ' years old'}`);
+        document.write(`</div>`);
+    }
+    }
+   createDoc(arrayField)
