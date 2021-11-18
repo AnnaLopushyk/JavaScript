@@ -42,8 +42,65 @@ getArray(array)
 
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+function createPagarraph (arg) {
+    document.write(arg);
+}
+createPagarraph('створена функція, яка створює параграф з текстом. Текст заданий через аргумент')
+
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+function createList (arg) {
+    document.write(`<ul>`);
+    document.write(`<li>${arg}</li>`);
+    document.write(`<li>${arg}</li>`);
+    document.write(`<li>${arg}</li>`);
+    document.write(`</ul>`)
+}
+createList('okten')
+// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+// Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+function createLi (arg,numb) {
+    if (typeof numb==='number') {
+        for (let i = 1; i<=numb; i++) {
+            document.write(`<ul>`);
+            document.write(`<li>${arg}</li>`);
+            document.write(`</ul>`);
+        }
+    }
+}
+createLi('student',5)
+
+
+
+
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-//
-// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+
+let arr=[10,20,'school',true,'best']
+function buildList(value) {
+    for (let i = 0; i<arr.length; i++) {
+        document.write(`<ul>`);
+        document.write(`<li>${arr[i]}</li>`);
+        document.write(`</ul>`);
+    }
+}
+buildList(arr)
+
+
+
+// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+// Для кожного об'єкту окремий блок.
+let arrayField = [
+    {   id:1,
+        name:Anna,
+        age:30
+    },
+    {   id:2,
+        name:Olya,
+        age:32
+    },
+    {   id:3,
+        name:Vasya,
+        age:35
+    }
+]
+
+function createDoc()
