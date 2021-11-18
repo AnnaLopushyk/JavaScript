@@ -36,11 +36,9 @@ let array = [1,2,3,4,5,'okten','school'];
 function getArray (array) {
     for (let key in array) {
     console.log(`${array[key]}`);
-        return key;
     }
-    getArray(array)
 }
-
+getArray(array)
 
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
