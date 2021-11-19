@@ -98,7 +98,7 @@ function minMaxNumb(array2) {
     return min;
 }
 
-// - створити функцію яка заповнює масив рандомними числами
+//8. - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
 
 function randomArray (arr3) {
@@ -110,7 +110,7 @@ function randomArray (arr3) {
 
 
 
-// - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+// 9.- створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
 
 function randomArraylimit (arrays,limit) {
     for (let i =o; i<15; i++) {
@@ -121,5 +121,14 @@ function randomArraylimit (arrays,limit) {
 
 
 
-// - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
-//
+// 10.- Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+array4 = [2,3,4,5];
+function reverseNewArray (array4) {
+    let newArray = [];
+    for (let i=array4.length-1, ri=0; i>=0; i--, ri++) {
+newArray[ri] = array4[i];
+    }
+    return newArray;
+}
+let resultIs = reverseNewArray(array4);
+console.log(resultIs);
