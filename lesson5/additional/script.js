@@ -13,16 +13,18 @@ for (let i=0; i<arrayNumb.length; i++) {
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
 
-
-enterNumbs=(...arr)=> {
-  for (let element of arr) {
-     let A = arr[0];
-      let B = arr.length-1;
-      if(A<B) console.log(arr);
-if (A>B) console.log((arr.length-1))
-  }
+let array=[2,3,4,5,6,7,8];
+enterNumbs=(A,B)=> {
+      if(A<B) for (let key of array) {
+          A=key++
+          console.log(A)
+      }
+      if (A>B) for (let i=1; i<=array.length;i++) {
+         A--
+          console.log(A)
+      }
 }
-enterNumbs(2,3,4,5,6,7,8);
+enterNumbs(1,8);
 
 
 
@@ -33,19 +35,18 @@ enterNumbs(2,3,4,5,6,7,8);
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
-foo=[9,8,0,4];
-let fnAcceptArray = (array,val)=> {
-
-        for (let i = 0; i < foo.length-1; i++) {
-        if(val=i+1) {
-            let key=array[i];
-            array[i]=array[i+1];
-            array[i+1]=key;
-            console.log(array)
-        }
-        }
-  }
- fnAcceptArray([9,8,0,4],0);
+// foo=[9,8,0,4];
+// let fnAcceptArray = (array,val)=> {
+//
+//         for (let i = 0; i < foo.length-1; i++) {
+//             val=val+1;
+//             let key=array[i];
+//             array[i]=array[i+1];
+//             array[i+1]=key;
+//             console.log(array)
+//         }
+//   }
+//  fnAcceptArray([9,8,0,4],0);
 
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.
 // Зберігаючи при цьому порядок не нульових значень.
