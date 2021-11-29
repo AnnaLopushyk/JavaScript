@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework-Template1</title>
+    <style>
+        .fon {
+            background: red;
+            color: blue;
+        }
+
+        .fc_rules {
+            color: darkred;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<p id="content" class="fon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
+    molestias mollitia pariatur porro saepe! Dolorem eaque earum eligendi, iste maxime molestias quam vitae.
+    Dolore hic in quae sed.
+</p>
+
+<div id="rules" class="fc bp fon">
+    Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе. Второе правило Бойцовского
+    клуба: никогда никому не рассказывать о Бойцовском клубе. Третье правило Бойцовского клуба: в схватке
+    участвуют только двое. Четвертое правило Бойцовского клуба: не более одного поединка за один раз
+</div>
+
+<ul class="fon">
+    <li class="fc_rules rule1">Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе.</li>
+    <li class="fc_rules rule2">Второе правило Бойцовского
+        клуба: никогда никому не рассказывать о Бойцовском клубе
+    </li>
+    <li class="fc_rules rule3">Третье правило Бойцовского клуба: в схватке
+        участвуют только двое.
+    </li>
+    <li class="fc_rules rule4">Четвертое правило Бойцовского клуба: не более одного поединка за один раз</li>
+</ul>
+
+
+<script>
+// <!-- - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :-->
+// <!--&#45;&#45; отримує текст з параграфа з id "content"--
+
+let text=document.getElementById('content');
+console.log(text);
+
+// <!--&#45;&#45; отримує текст з блоку з id "rules"-->
+
+let textRules=document.getElementById('rules');
+console.log(textRules);
+
+
+// <!--&#45;&#45; замініть текст параграфа з id 'content' на будь-який інший-->
+
+let changeTextIdContent= document.getElementById('content');
+changeTextIdContent.innerText= ('Когда думают, что ты умираешь, тебя правда слушают — А не только ждут своей очереди заговорить…');
+console.log(changeTextIdContent);
+
+
+// <!--&#45;&#45; замініть текст параграфа з id 'rules' на будь-який інший-->
+
+let changeTextIdRules= document.getElementById('rules');
+changeTextIdRules.innerText = ('И вдруг, что-то произошло. Я расслабился. Полное самозабвение, тьма и тихая полноценность. Я обрёл свободу. Потерять все надежды — вот что значит обрести свободу.');
+console.log(changeTextIdRules);
+//
+// <!--&#45;&#45; змініть кожному елементу колір фону на червоний--> done
+// <!--&#45;&#45; змініть кожному елементу колір тексту на синій-->done
+// <!--&#45;&#45; отримати весь список класів елемента з id=rules і вивести їх в console.log-->
+
+let elem = document.querySelector('#rules');
+console.log((elem.classList));
+
+// <!--&#45;&#45; поміняти колір тексту у всіх елементів fc_rules на червоний-->
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -68,10 +68,16 @@ return someText[0].toUpperCase()+someText.slice(1);
 console.log(fn(someText))
 
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
-let someStr='i like programming. okten school-the best!';
-function capitalize(string) {
-    return someStr.charAt(0).toUpperCase() + someStr.substring(1)
-}
+
+let capitalize = (str) => {
+    return str.split(' ').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
+};
+document.write(capitalize('okten hi you are welcome'));
+console.log(capitalize('okten hi you are welcome'));
 
 
+// String.prototype.capitalize = function(allWords) {
+//     return (allWords) ? // if all words
 
+//         this.split(' ').map(word => word.capitalize()).join(' ') :
+//         this.charAt(0).toUpperCase() + this.slice(1);
