@@ -63,7 +63,7 @@ document.writeln(insert_dash(str));
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
 let someText='okten school';
 let fn = arg=>{
-return someText[0].toUpperCase()+someText.slice(1)
+return someText[0].toUpperCase()+someText.slice(1);
 }
 console.log(fn(someText))
 
@@ -75,8 +75,3 @@ function capitalize(string) {
 
 
 
-    //
-    // String.prototype.capitalize = function(allWords) {
-    //     return (allWords) ? // if all words
-    //         this.split(' ').map(word => word.capitalize()).join(' ') :
-    //         this.charAt(0).toUpperCase() + this.slice(1);
