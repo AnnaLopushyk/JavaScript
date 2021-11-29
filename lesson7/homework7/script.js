@@ -38,7 +38,7 @@ console.log(arr)
 
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 
-emptyArr.sort((a,b)=> b.id-a.id)
+emptyArr.sort((a,b)=> b.id-a.id);
 console.log(emptyArr)
 
 

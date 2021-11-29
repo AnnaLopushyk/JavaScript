@@ -10,7 +10,7 @@ function Car (model, producer,year,speedMax,engineCapacity ) {
 
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
     this.drive = function (){
-        console.log(`їдемо зі швидкістю ${speedMax}`)
+        console.log(`їдемо зі швидкістю ${speedMax}`);
     };
 
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
@@ -88,7 +88,7 @@ class Cars {
         };
 }
 let addCars = new Cars ('Volvo',
-    'Sweden',2018,280,2.8)
+    'Sweden',2018,280,2.8);
 console.log(addCars);
 addCars.info();
 addCars.increaseMaxSpeed(20);
@@ -120,7 +120,7 @@ let princess = [
     new Popelyshka ('Olena',31,38),
     new Popelyshka ('Inna',29,37),
     new Popelyshka ('Oly',32,36),
-    new Popelyshka ('Tanya',30,35),
+    new Popelyshka ('Tanya',30,35)
 ]
 console.log(princess)
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.

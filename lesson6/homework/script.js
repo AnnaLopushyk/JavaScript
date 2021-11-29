@@ -17,8 +17,8 @@ console.log('HELLO WORLD'.toLowerCase());
 console.log('LOREM IPSUM'.toLowerCase());
 console.log('JAVASCRIPT IS COOL'.toLowerCase())
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
-let str = ' dirty string   '
-console.log(str.length)
+let str = ' dirty string   ';
+console.log(str.length);
 console.log(str.trim())
 
 
@@ -31,7 +31,7 @@ function stringToarray(str) {
    return text.split(' ');
 
 }
-console.log(stringToarray(text))
+console.log(stringToarray(text));
 document.write(`${stringToarray(text)}`)
 
 
@@ -43,7 +43,7 @@ document.write(`${stringToarray(text)}`)
 let delete_characters=(str, length)=>{
     return ster.substring(0,7)
 }
-console.log(delete_characters(0,7))
+console.log(delete_characters(0,7));
 document.write(`<br>${delete_characters(0,7)}`)
 
 
@@ -53,7 +53,7 @@ document.write(`<br>${delete_characters(0,7)}`)
 // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
      let str1 = "HTML JavaScript PHP";
 let insert_dash=str=> {
-    let line =str1.toUpperCase().replaceAll(' ','-')
+    let line =str1.toUpperCase().replaceAll(' ','-');
     return line
 
 }
@@ -68,11 +68,15 @@ return someText[0].toUpperCase()+someText.slice(1)
 console.log(fn(someText))
 
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
-let someStr='I like programming. Okten school-the best!';
-let capitalize=str=> {
-       let change = someStr.toLowerCase()
-    return change;
-   }
+let someStr='i like programming. okten school-the best!';
+function capitalize(string) {
+    return someStr.charAt(0).toUpperCase() + someStr.substring(1)
+}
 
 
-console.log(capitalize(someStr))
+
+    //
+    // String.prototype.capitalize = function(allWords) {
+    //     return (allWords) ? // if all words
+    //         this.split(' ').map(word => word.capitalize()).join(' ') :
+    //         this.charAt(0).toUpperCase() + this.slice(1);
