@@ -43,39 +43,54 @@
 
 <script>
 // <!-- - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :-->
-// <!--&#45;&#45; отримує текст з параграфа з id "content"--
+//  отримує текст з параграфа з id "content"--
 
 let text=document.getElementById('content');
-console.log(text);
+console.log(text.innerText);
 
-// <!--&#45;&#45; отримує текст з блоку з id "rules"-->
+//  отримує текст з блоку з id "rules"-->
 
 let textRules=document.getElementById('rules');
-console.log(textRules);
+console.log(textRules.innerText);
 
 
-// <!--&#45;&#45; замініть текст параграфа з id 'content' на будь-який інший-->
+//  замініть текст параграфа з id 'content' на будь-який інший-->
 
 let changeTextIdContent= document.getElementById('content');
 changeTextIdContent.innerText= ('Когда думают, что ты умираешь, тебя правда слушают — А не только ждут своей очереди заговорить…');
 console.log(changeTextIdContent);
 
 
-// <!--&#45;&#45; замініть текст параграфа з id 'rules' на будь-який інший-->
+//  замініть текст параграфа з id 'rules' на будь-який інший-->
 
 let changeTextIdRules= document.getElementById('rules');
 changeTextIdRules.innerText = ('И вдруг, что-то произошло. Я расслабился. Полное самозабвение, тьма и тихая полноценность. Я обрёл свободу. Потерять все надежды — вот что значит обрести свободу.');
 console.log(changeTextIdRules);
 //
-// <!--&#45;&#45; змініть кожному елементу колір фону на червоний--> done
-// <!--&#45;&#45; змініть кожному елементу колір тексту на синій-->done
-// <!--&#45;&#45; отримати весь список класів елемента з id=rules і вивести їх в console.log-->
+// змініть кожному елементу колір фону на червоний--
+
+let children = document.body.children;
+for (let child of children) {
+    child.style.background= 'red';
+}
+console.log(children);
+// змініть кожному елементу колір тексту на синій
+let childrens = document.body.children;
+for (let childs of children) {
+    childs.style.background= 'blue'
+}
+console.log(childrens)
+//  отримати весь список класів елемента з id=rules і вивести їх в console.log-->
 
 let elem = document.querySelector('#rules');
 console.log((elem.classList));
 
-// <!--&#45;&#45; поміняти колір тексту у всіх елементів fc_rules на червоний-->done
-
+//  поміняти колір тексту у всіх елементів fc_rules на червоний
+let changeColorElement = document.getElementsByClassName('fc_rules')
+for (let elemByRules of changeColorElement) {
+    elemByRules.style.color='red';
+}
+console.log(changeColorElement)
 
 </script>
 
