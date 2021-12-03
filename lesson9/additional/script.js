@@ -254,11 +254,11 @@
          streetDiv.innerText = value.address.street
 
          let suiteDiv = document.createElement('div');
-         suiteDiv.innerText =`${value.address[0]}`
+         suiteDiv.innerText =value.address.suite
          let cityDiv = document.createElement('div');
-         // cityDiv.innerText =
+         cityDiv.innerText =value.address.city;
          let zipcodeDiv = document.createElement('div');
-         // zipcodeDiv.innerText =
+         zipcodeDiv.innerText =value.address.street.zipcode;
          addressDiv.append(streetDiv,suiteDiv,cityDiv,zipcodeDiv);
      }
 
