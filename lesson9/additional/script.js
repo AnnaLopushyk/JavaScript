@@ -251,26 +251,27 @@
      for (let item in value.address){
 
          let streetDiv = document.createElement('div');
-         streetDiv.innerText = value.address.street
+         streetDiv.innerText = item.street
 
          let suiteDiv = document.createElement('div');
-         suiteDiv.innerText =value.address.suite
+         suiteDiv.innerText =item.suite
          let cityDiv = document.createElement('div');
-         cityDiv.innerText =value.address.city;
-         let zipcodeDiv = document.createElement('div');
-         zipcodeDiv.innerText =value.address.street.zipcode;
+         cityDiv.innerText =item.city;
+         let zipcodeDiv = document.createElement("object");
+         zipcodeDiv.innerText =item.zipcode;
          addressDiv.append(streetDiv,suiteDiv,cityDiv,zipcodeDiv);
-     }
 
-       // let geoDiv = document.createElement('div');
-       // value.address.geo.forEach(item => {
-       //     let latDiv = document.createElement('div');
-       //     latDiv.innerText = value.address.geo.lat
-       //     let lngDiv = document.createElement('div');
-       //     lngDiv.innerText = value.address.geo.lng
-       //     geoDiv.append(latDiv,lngDiv)
-       // })
-       //
+         // let geoDiv = document.createElement('div');
+         // value.address.geo.forEach(item => {
+         //     let latDiv = document.createElement('div');
+         //     latDiv.innerText = value.address.geo.lat
+         //     let lngDiv = document.createElement('div');
+         //     lngDiv.innerText = value.address.geo.lng
+         //     geoDiv.append(latDiv,lngDiv)
+         // })
+
+
+     }
 
 
 
@@ -278,9 +279,11 @@
        phoneDiv.innerText = value.phone;
        let websiteDive = document.createElement('div');
        websiteDive.innerText = value.website;
-       //
+       let companyDiv = document.createElement('div');
+       companyDiv.innerText = value.company
 
-       usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,websiteDive);
+
+       usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,websiteDive,companyDiv);
        document.body.appendChild(usersDiv)
 
 
