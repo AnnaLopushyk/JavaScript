@@ -248,6 +248,7 @@
 
 
          let addressDiv = document.createElement('div');
+         addressDiv.innerText = value.address
                let streetDiv = document.createElement('div');
                streetDiv.innerText = value.address.street
                let suiteDiv = document.createElement('div');
@@ -259,12 +260,12 @@
           addressDiv.append(streetDiv,suiteDiv,cityDiv,zipcodeDiv);
 
                        let geoDiv = document.createElement('div');
+                       geoDiv.innerText = value.address.geo
                            let latDiv = document.createElement('div');
                            latDiv.innerText = value.address.geo.lat
                            let lngDiv = document.createElement('div');
                            lngDiv.innerText = value.address.geo.lng
                        geoDiv.append(latDiv,lngDiv)
-
 
 
 
@@ -276,9 +277,9 @@
        companyDiv.innerText = value.company
 
        usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,);
-       document.body.appendChild(usersDiv)
-       }
 
+       }
+    document.body.appendChild(usersDiv)
 
 
 
