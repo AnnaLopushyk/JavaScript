@@ -246,32 +246,25 @@
        let emailDiv = document.createElement('div');
        emailDiv.innerText = value.email;
 
-       let addressDiv = document.createElement('div');
 
-     for (let item in value.address){
+         let addressDiv = document.createElement('div');
+               let streetDiv = document.createElement('div');
+               streetDiv.innerText = value.address.street
+               let suiteDiv = document.createElement('div');
+               suiteDiv.innerText =value.address.suite
+               let cityDiv = document.createElement('div');
+               cityDiv.innerText =value.address.city;
+               let zipcodeDiv = document.createElement("div");
+               zipcodeDiv.innerText =value.address.zipcode;
+          addressDiv.append(streetDiv,suiteDiv,cityDiv,zipcodeDiv);
 
-         let streetDiv = document.createElement('div');
-         streetDiv.innerText = item.street
+                       let geoDiv = document.createElement('div');
+                           let latDiv = document.createElement('div');
+                           latDiv.innerText = value.address.geo.lat
+                           let lngDiv = document.createElement('div');
+                           lngDiv.innerText = value.address.geo.lng
+                       geoDiv.append(latDiv,lngDiv)
 
-         let suiteDiv = document.createElement('div');
-         suiteDiv.innerText =item.suite
-         let cityDiv = document.createElement('div');
-         cityDiv.innerText =item.city;
-         let zipcodeDiv = document.createElement("object");
-         zipcodeDiv.innerText =item.zipcode;
-         addressDiv.append(streetDiv,suiteDiv,cityDiv,zipcodeDiv);
-
-         // let geoDiv = document.createElement('div');
-         // value.address.geo.forEach(item => {
-         //     let latDiv = document.createElement('div');
-         //     latDiv.innerText = value.address.geo.lat
-         //     let lngDiv = document.createElement('div');
-         //     lngDiv.innerText = value.address.geo.lng
-         //     geoDiv.append(latDiv,lngDiv)
-         // })
-
-
-     }
 
 
 
@@ -282,9 +275,13 @@
        let companyDiv = document.createElement('div');
        companyDiv.innerText = value.company
 
-
-       usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,websiteDive,companyDiv);
+       usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,);
        document.body.appendChild(usersDiv)
+       }
 
 
-   }
+
+
+
+
+
