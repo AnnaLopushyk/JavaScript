@@ -267,8 +267,6 @@
                            lngDiv.innerText = value.address.geo.lng
                        geoDiv.append(latDiv,lngDiv)
 
-
-
        let phoneDiv = document.createElement('div');
        phoneDiv.innerText = value.phone;
        let websiteDive = document.createElement('div');
