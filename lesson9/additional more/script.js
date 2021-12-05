@@ -66,7 +66,7 @@ document.body.appendChild(document.createElement('hr'))
 for (let item of users){
     let divAddress = document.createElement('div');
     let divCity = document.createElement('div');
-    divCity = item.address.city;
+    divCity = `${item.address.city}`;
     let divCountry = document.createElement('div');
     divCountry = item.address.country;
     let divStreet  = document.createElement('div');
@@ -92,7 +92,7 @@ document.body.appendChild(document.createElement('hr'))
 
 for (let value of users) {
     let div2 = document.createElement('div');
-    div2.append(value.name, value.age, value.status,value.address)
+    div2.append(`${value.name} - ${value.age} - ${value.status} - ${value.address.street}`)
 
     document.body.appendChild(div2)
 }
@@ -105,14 +105,14 @@ for (let property of users) {
     let userDiv = document.createElement('div');
     userDiv.classList.add('view')
     let nameDiv = document.createElement('div');
-    nameDiv.innerText = property.name
+    nameDiv.innerText = `${property.name}`;
     let ageDiv = document.createElement('div');
-    ageDiv.innerText = property.age
+    ageDiv.innerText = `${property.age}`;
     let statusDiv = document.createElement('div');
-    statusDiv.innerText = property.status
+    statusDiv.innerText = `${property.status}`;
 
     let addresaDiv = document.createElement('div');
-    addresaDiv.innerText = property.address
+    // addresaDiv.innerText = `${property.address}`
     let adressElements = document.createElement('div');
     adressElements.classList.add('adress')
     addresaDiv.appendChild(adressElements);
@@ -130,15 +130,15 @@ for (let elements of users){
     let userDiv = document.createElement('div');
     userDiv.classList.add('view')
     let nameDiv = document.createElement('div');
-    nameDiv.innerText = elements.name
+    nameDiv.innerText = `${elements.name}`;
     let ageDiv = document.createElement('div');
-    ageDiv.innerText = elements.age
+    ageDiv.innerText = `${elements.age}`;
     let statusDiv = document.createElement('div');
-    statusDiv.innerText = elements.status
+    statusDiv.innerText = `${elements.status}`
 
 
     let addresaDiv = document.createElement('div');
-    addresaDiv.innerText = elements.address
+    // addresaDiv.innerText = `${elements.address}`
     let adressElements = document.createElement('div');
     adressElements.classList.add('adress')
     addresaDiv.appendChild(adressElements)
@@ -203,3 +203,19 @@ let rules = [
 // -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
 //     При цьому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 //     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
+
+
+let divWrap = document.createElement('div');
+for (value2 of rules){
+
+    let divForProperty = document.createElement('div');
+    let divTitle = document.createElement('h2');
+    let divBody = document.createElement('p');
+
+    divTitle.innerText= value2.title;
+    divBody.innerText = value2.body;
+
+    divForProperty.append(divTitle,divBody)
+divWrap.appendChild(divForProperty)
+}
+document.body.appendChild(divWrap)
