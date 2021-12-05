@@ -237,7 +237,7 @@
     let usersDiv = document.createElement('div');
    for (let value of usersList) {
        let idDiv = document.createElement('div');
-       idDiv.classList.add('sizeId')
+       idDiv.classList.add('sizeId');
        idDiv.innerText = value.id;
        let nameDiv = document.createElement('div');
        nameDiv.innerText = value.name;
@@ -248,7 +248,6 @@
 
 
          let addressDiv = document.createElement('div');
-         addressDiv.innerText = value.address
                let streetDiv = document.createElement('div');
                streetDiv.innerText = value.address.street
                let suiteDiv = document.createElement('div');
@@ -260,7 +259,6 @@
           addressDiv.append(streetDiv,suiteDiv,cityDiv,zipcodeDiv);
 
                        let geoDiv = document.createElement('div');
-                       geoDiv.innerText = value.address.geo
                            let latDiv = document.createElement('div');
                            latDiv.innerText = value.address.geo.lat
                            let lngDiv = document.createElement('div');
@@ -274,7 +272,7 @@
        let companyDiv = document.createElement('div');
        companyDiv.innerText = value.company
 
-       usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,);
+       usersDiv.append(idDiv,nameDiv,usernameDiv,emailDiv,phoneDiv,addressDiv,geoDiv);
 
        }
     document.body.appendChild(usersDiv)
