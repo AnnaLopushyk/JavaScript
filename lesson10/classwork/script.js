@@ -28,10 +28,10 @@ inputeTwo.setAttribute('name','inputeTwo');
 
 
 let inputeThree = document.createElement('input');
-inputeOne.setAttribute('name','inputeThree');
+inputeThree.setAttribute('name','inputeThree');
 
 let inputeFour = document.createElement('input');
-inputeTwo.setAttribute('name','inputeFour')
+inputeFour.setAttribute('name','inputeFour')
 
 
 let button = document.createElement('button');
@@ -44,10 +44,10 @@ formTwo.append(inputeThree,inputeFour);
 
 
 button.addEventListener('click', function (){
-    console.log(document.form.formOne.inputeOne.value);
-    console.log(document.form.formOne.inputeTwo.value);
-    console.log(document.form.formTwo.inputeThree.value);
-    console.log(document.form.formTwo.inputeFour.value);
+    console.log(document.forms.formOne.inputeOne.value);
+    console.log(document.forms.formOne.inputeTwo.value);
+    console.log(document.forms.formTwo.inputeThree.value);
+    console.log(document.forms.formTwo.inputeFour.value);
 })
 
 
