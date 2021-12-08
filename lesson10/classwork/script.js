@@ -1,4 +1,4 @@
-//
+
 // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується
 // та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
@@ -54,18 +54,85 @@ button.addEventListener('click', function (){
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
-//
-//
+
+
+    let rows = document.createElement('input');
+rows.setAttribute('number', '1')
+    let columns = document.createElement('input');
+columns.setAttribute('number', '1')
+    let textInput = document.createElement('input');
+    let buttonElement = document.createElement('button');
+    buttonElement.innerText='generate Table';
+
+   document.body.append(rows,columns,textInput,buttonElement)
+
+
+buttonElement.addEventListener('click', function () {
+    let table = document.createElement('table');
+    let tr = document.createElement('tr');
+    for (i=1; i<rows; i++) {
+        tr.innerText = rows.value;
+        table.append(tr);
+        let td = document.createElement('td');
+        for (j=0 ; j<columns; j++){
+            td.innerText = textInput.value;
+            tr.appendChild(td);
+        }
+    }
+
+        document.body.appendChild(table);
+})
+
+
+
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
 // кинути алерт з попередженням.
 //     Перевірку робити при натисканні на кнопку
-//
-//
+
+document.body.append(document.createElement('hr'))
+
+let array = ['хамло', 'лицемір','цинік','паразит', 'партач','рагуль'];
+let inputBlock = document.createElement('input');
+let buttonElem = document.createElement('button');
+buttonElem.innerText = 'checked';
+document.body.append(inputBlock,buttonElem)
+
+buttonElem.addEventListener('click', function () {
+    let valueInput = inputBlock.value;
+    for (word of array) {
+        if( word===valueInput ) {
+            alert('ну ну ну!)');
+        }
+    }
+
+})
+
+
+document.body.append(document.createElement('hr'))
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
-//
+
+
+
+array1 = ['хамло', 'лицемір','цинік','паразит', 'партач','рагуль'];
+input = document.createElement('input');
+btn1 = document.createElement('button');
+btn1.innerText = 'checked';
+document.body.append(input,btn1)
+
+
+btn1.addEventListener('click', function () {
+    let sentence = input.value;
+    for (let badWord of array1) {
+        if( sentence.includes(badWord) ) {
+            alert('it is a bad word here!');
+
+        }
+    }
+
+})
