@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11 lesson-dop</title>
+</head>
+
+
+<body>
+<script>
+    // console.log(window.location);
+    // location.reload();
+    // history.back();
+    // history.forward();
+    // history.pushState('someState','some title','url');
+    // console.log(navigator.hardwareConcurrency);
+    // console.log(navigator);
+//   ПАРСИТИ -  зчитували стрінгу,розподіляти на частити на анлізувати
+
+
+//    session storage
+
+    // sessionStorage.setItem('дозволяє під якийсь ключ записати певне значення',
+        // 'щоб подивитисya заходимо в application-session storage (де консоль)')
+
+
+    console.log(sessionStorage.setItem('asd', 'qwewq'));
+    console.log(location.href);
+    let url = new URL(location.href);
+    console.log(url);
+    let searchDirty = url.search
+    console.log(url.searchDirty);
+let utm = {
+    param : searchDirty
+}
+
+
+    console.log(sessionStorage.getItem('asd'));
+    let stringify = JSON.stringify(utm);
+    console.log(stringify)
+    sessionStorage.setItem('asd',stringify)
+
+    // JSON - java-script object notiation
+// Це стрінга, але з виглядом як джава скрипт обект
+
+    let item = sessionStorage.getItem('asd');
+    console.log(item);
+    console.log(JSON.parse(item));
+
+    if (navigator.cookieEnabled) {
+        alert('1111')
+    }
+
+
+</script>
+</body>
+</html>
