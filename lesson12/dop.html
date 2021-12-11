@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dop</title>
+</head>
+<body>
+
+
+<script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then (function (resolve) {
+console.log(resolve);
+let jsonBody = resolve.json();
+return jsonBody
+    }).then( users => {
+        console.log(users)
+    });
+
+
+
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then( function (resolve) {
+        console.log(resolve);
+        let json = resolve.json();
+        return json
+    }).then(users1 => {
+        console.log(users1)
+    });
+
+
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(someResponse => someResponse.json())
+    .then(usersArray => {
+        for (let user of usersArray) {
+            let div = document.createElement('div');
+            div.innerText = `${user.name}--- ${user.username}--- ${user.phone}`
+            document.body.appendChild(div);
+        }
+    })
+
+</script>
+</body>
+</html>
