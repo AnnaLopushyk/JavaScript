@@ -6,12 +6,12 @@
 fetch('https://jsonplaceholder.typicode.com/posts')
 .then(posts => posts.json())
 .then(postsArray => {
-    console.log(postsArray)
+    console.log(postsArray);
     let divPosts = document.createElement('div');
 
     for (let post of postsArray) {
 let divElement = document.createElement('div');
-divElement.classList.add('element')
+divElement.classList.add('element');
 
         let userId = document.createElement('div');
         userId.innerText = `userId: ${post.userId}`;
@@ -36,28 +36,28 @@ divElement.classList.add('element')
           fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
               .then(response => response.json())
               .then(commentsArr => {
-                  console.log(commentsArr)
+                  console.log(commentsArr);
                   let commentsDiv = document.createElement('div');
-                  commentsDiv.classList.add('comments')
+                  commentsDiv.classList.add('comments');
                   for (let comment of commentsArr) {
                       let commDiv = document.createElement('div');
-                      commDiv.innerText = comment.body
+                      commDiv.classList.add('commentStyle');
+                      commDiv.innerText = comment.body;
 
-                      commentsDiv.appendChild(commDiv)
-                    divElement.appendChild(commentsDiv)
+
+                      commentsDiv.appendChild(commDiv);
+                    divElement.appendChild(commentsDiv);
 
                   }
 
               })
         }
 
-
 divPosts.appendChild(divElement);
-document.body.appendChild(divPosts)
+document.body.appendChild(divPosts);
 
 
     }
-
 
 })
 
