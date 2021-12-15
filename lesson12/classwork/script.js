@@ -33,14 +33,18 @@ divElement.classList.add('element')
 
         btn.onclick = ()=> {
             console.log(post.id)
-          fetch('https://jsonplaceholder.typicode.com/posts/${post.id}/comments')
+          fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
               .then(response => response.json())
               .then(commentsArr => {
                   console.log(commentsArr)
+                  let commentsDiv = document.createElement('div');
+                  commentsDiv.classList.add('comments')
                   for (let comment of commentsArr) {
+                      let commDiv = document.createElement('div');
+                      commDiv.innerText = comment.body
 
-
-
+                      commentsDiv.appendChild(commDiv)
+                    divElement.appendChild(commentsDiv)
 
                   }
 
