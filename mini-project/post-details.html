@@ -2,41 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>post-detail</title>
 </head>
 <body>
 
 
 <script>
 
-    let url = new URL(location.href);
-    let post = url.searchParams.get('data');
-    let postArr = JSON.parse(post);
+    let urlPost = new URL(location.href);
+    let idOfPost = urlPost.searchParams.get('data');
+    let postArr = JSON.parse(idOfPost);
      console.log(postArr)
+    document.write(idOfPost )
 
-    // fetch(`https://jsonplaceholder.typicode.com/users/${post.id}/users/`)
-    // .then (posts=> posts.json())
-    // .then (posts => {
+    //
+    // fetch(`https://jsonplaceholder.typicode.com/users/posts`+ idOfPost)
+    // .then (value=> value.json())
+    // .then (value => {
+    //     console.log(value)
 
         let postDiv = document.createElement('div');
-        postDiv.innerText = JSON.stringify(post);
+        postDiv.innerText = JSON.stringify(postArr);
 
-    let idPostDiv = document.createElement('div');
-    idPostDiv.innerText = `id: ${post.id}`;
-
-    let useridPostDiv = document.createElement('div');
-    useridPostDiv.innerText = `userId: ${post.userId}`;
-
-    let titlePostDiv = document.createElement('div');
-    titlePostDiv.innerText =`title ${post.title}`;
-
-    let bodyPostDiv = document.createElement('div');
-    bodyPostDiv.innerText = `body: ${post.body}`;
-
-
-
-    postDiv.appendChild (idPostDiv, useridPostDiv, titlePostDiv, bodyPostDiv);
-        document.body.appendChild(postDiv);
+    // let idPostDiv = document.createElement('div');
+    // idPostDiv.innerText = `id: ${post.data.id}`;
+    //
+    // let useridPostDiv = document.createElement('div');
+    // useridPostDiv.innerText = `userId: ${post.userId}`;
+    //
+    // let titlePostDiv = document.createElement('div');
+    // titlePostDiv.innerText =`title ${post.title}`;
+    //
+    // let bodyPostDiv = document.createElement('div');
+    // bodyPostDiv.innerText = `body: ${post.body}`;
+    //
+    //
+    //
+    // postDiv.append(idPostDiv, useridPostDiv, titlePostDiv, bodyPostDiv);
+    //     document.body.appendChild(postDiv);
+    //
     // })
 
 
