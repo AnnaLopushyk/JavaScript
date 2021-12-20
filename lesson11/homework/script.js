@@ -23,14 +23,9 @@ carsInfo.onsubmit = function (e) {
     let model = this.modelCar.value;
     let type = this.typeCar.value;
     let volume = this.volumeCar.value;
-    let car = {modelCar:model, typeCar:type,volumeCar:volume};
-    let cars = JSON.parse(localStorage.getItem('cars')) || [];
-    console.log(cars);
-        cars.push(car);
-        localStorage.setItem('cars',JSON.stringify(cars));
-    };
+    let car = {modelCar: model, typeCar: type, volumeCar: volume};
 
-
+}
 // let model = document.forms.carsInfo.model;
 // let type = document.forms.carsInfo.type;
 // let volume = document.forms.carsInfo.volume;

@@ -4,6 +4,8 @@
 //     кожному елементу юзера створити кнопку, при клику на яку в окремий блок виводяться всі пости поточного юзера.
 //     Кожному елементу post створити кнопку, при клику на яку в окремий блок виводяться всі коментарі поточного поста
 
+
+
 let usersDiv = document.getElementsByClassName('users')[0];
 
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -52,7 +54,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                                  let lngDiv = document.createElement('div');
                                  lngDiv.innerText = `lng: ${user.address.geo.lng}`;
 
-                                geoDiv.append(latDiv,lngDiv);
+                            geoDiv.append(latDiv,lngDiv);
 
 
                 addressDiv.append(cityDiv,streetDiv,suiteDiv,zipcodeDive,geoDiv);

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user-details</title>
+</head>
+<body>
+
+
+<script>
+
+    let url = new URL(location.href);
+ let idOfUser = url.searchParams.get('id');
+
+    // console.log(JSON.parse(idOfUser));
+
+    fetch('https://jsonplaceholder.typicode.com/users/' + idOfUser)
+    .then (user => user.json())
+    .then (user => {
+  console.log(user)
+
+
+        let userDiv = document.createElement('div');
+        userDiv.classList.add('user');
+
+        let userIdDiv = document.createElement('div');
+        userIdDiv.innerText = `Id - ${user.id}`;
+
+        let nameDiv = document.createElement('div');
+        nameDiv.innerText = `name - ${user.name}`;
+
+        let userNameDiv = document.createElement('div');
+        userNameDiv.innerText = `username - ${user.username}`;
+
+        let emailDiv = document.createElement('div');
+        emailDiv.innerText = `email - ${user.email}`;
+
+        let addressDiv = document.createElement('div');
+        addressDiv.classList.add('address');
+        addressDiv.innerText='address';
+
+                let cityDiv = document.createElement('div');
+                cityDiv.innerText = `city - ${user.address.city}`;
+
+                let streetDiv = document.createElement('div');
+                streetDiv.innerText = `street - ${user.address.street}`;
+
+                let suiteDiv = document.createElement('div');
+                suiteDiv.innerText = `suite - ${user.address.suite}`;
+
+                let zipcodeDive = document.createElement('div');
+                zipcodeDive.innerText = `zipcode - ${user.address.zipcode}`;
+
+                            let geoDiv = document.createElement('div');
+                            geoDiv.classList.add('geo');
+                            geoDiv.innerText = 'geo';
+                            let latDiv = document.createElement('div');
+                            latDiv.innerText = `lat: ${user.address.geo.lat}`;
+
+                                let lngDiv = document.createElement('div');
+                                lngDiv.innerText = `lng: ${user.address.geo.lng}`;
+
+    geoDiv.append(latDiv,lngDiv);
+
+
+    addressDiv.append(cityDiv,streetDiv,suiteDiv,zipcodeDive,geoDiv);
+
+
+
+    let companyDiv = document.createElement('div');
+    companyDiv.innerText = 'company';
+
+    let bsCompanyDiv = document.createElement('div');
+    bsCompanyDiv.innerText = `bs - ${user.company.bs}`;
+
+    let catchPhraseCompanyDiv = document.createElement('div');
+    catchPhraseCompanyDiv.innerText = `city - ${user.company.catchPhrase}`;
+
+    let nameCompanyDiv = document.createElement('div');
+    nameCompanyDiv.innerText = `name - ${user.company.name}`;
+
+    companyDiv.append(bsCompanyDiv,catchPhraseCompanyDiv,nameCompanyDiv)
+
+
+    let phoneDiv = document.createElement('div');
+    phoneDiv.innerText = `phone - ${user.phone}`;
+
+    let websiteDiv = document.createElement('div');
+    websiteDiv.innerText = `company - ${user.website}`;
+
+    let btnPost = document.createElement('button');
+    btnPost.innerText = 'post of current user';
+
+    btnPost.onclick = ()=> {
+        fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+        .then (posts=>posts.json())
+        .then(postsArr=> {
+            let titlesDiv = document.createElement('div');
+            titlesDiv.classList.add('title');
+            for (let post of postsArr) {
+                let titleDiv = document.createElement('div');
+                titleDiv.innerText =post.title;
+
+                let linkDiv = document.createElement('div');
+                let postLink = document.createElement('a');
+                postLink.innerText = 'post-details';
+                postLink.href = 'post-details.html?data=' + JSON.stringify(post);
+
+
+
+                linkDiv.appendChild(postLink);
+                titleDiv.appendChild(linkDiv);
+                titlesDiv.appendChild(titleDiv);
+                userDiv.appendChild(titlesDiv)
+
+
+            }
+        })
+
+    }
+        userDiv.append(userIdDiv,nameDiv,userNameDiv,emailDiv,addressDiv,companyDiv,phoneDiv,websiteDiv,btnPost);
+        document.body.appendChild(userDiv);
+
+    })
+
+
+</script>
+</body>
+</html>
