@@ -51,13 +51,13 @@
 <script>
 
     let urlPost = new URL(location.href);
-    let idOfPost = urlPost.searchParams.get('id');
+    let idOfPost = urlPost.searchParams.get('title');
     // let postArr = JSON.parse(idOfPost);
     //  console.log(postArr)
     // document.write(idOfPost )
 
 
-    fetch('https://jsonplaceholder.typicode.com/posts?portId='+ idOfPost)
+    fetch('https://jsonplaceholder.typicode.com/posts?title='+ idOfPost)
     .then (post=> post.json())
     .then (post => {
         // console.log(post)
