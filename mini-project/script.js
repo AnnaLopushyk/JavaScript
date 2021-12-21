@@ -53,14 +53,17 @@ console.log(usersArr)
         let nameDiv = document.createElement('div');
         nameDiv.innerText = `name: ${user.name}`;
 
+
+
+        let userDetailBtn = document.createElement('button');
         let detailsLink = document.createElement('a');
         detailsLink.innerText = 'user-details'
         detailsLink.classList.add('detailsLink')
     detailsLink.href = 'user-details.html?id=' + user.id
 
 
-
-        userDiv.append(idUserDiv,nameDiv,detailsLink);
+        userDetailBtn.appendChild(detailsLink)
+        userDiv.append(idUserDiv,nameDiv,userDetailBtn);
         document.body.append(userDiv);
     }
     })
