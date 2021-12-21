@@ -42,9 +42,10 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .then(usersArr => {
 console.log(usersArr)
     for (let user of usersArr) {
-
         let userDiv = document.createElement('div');
         userDiv.classList.add('user');
+
+
 
         let idUserDiv = document.createElement('div');
         idUserDiv.innerText = `id: ${user.id}`;
@@ -55,6 +56,8 @@ console.log(usersArr)
         let detailsLink = document.createElement('a');
         detailsLink.innerText = 'user-details'
     detailsLink.href = 'user-details.html?id=' + user.id
+
+
 
         userDiv.append(idUserDiv,nameDiv,detailsLink);
         document.body.append(userDiv);
