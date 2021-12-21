@@ -6,14 +6,30 @@
 
     <style>
         .allPostInfo {
-            width: 1200px;
-            background-color: lightpink;
-            margin: 5px;
+            max-width: 1200px;
+            background-color: lightseagreen;
+            margin: 10px;
+            padding: 10px;
             justify-content: center;
             /*display: block;*/
         }
+        .commentButtonDiv {
+            /*text-align: center;*/
+            margin: 10px;
+        }
+        .btnComments {
+            font-weight: bold;
+            width: 40%;
+            align-items: center;
+
+        }
+        .btnComments:hover {
+            cursor: pointer;
+            background-color: #fd8d48;
+
+        }
              .commentStyle {
-                 background-color: #e2f1f1;
+                 background-color: #ece149;
                  margin: 5px;
                  width:22%;
                  padding: 10px;
@@ -24,7 +40,6 @@
                  display: flex;
                  flex-wrap: wrap;
                  justify-content: space-between;
-
 
              }
 
@@ -42,7 +57,7 @@
     // document.write(idOfPost )
 
 
-    fetch('https://jsonplaceholder.typicode.com/posts?userId='+ idOfPost)
+    fetch('https://jsonplaceholder.typicode.com/posts?portId='+ idOfPost)
     .then (post=> post.json())
     .then (post => {
         // console.log(post)
@@ -65,8 +80,10 @@
 
 
          let commentButtonDiv = document.createElement('div');
+         commentButtonDiv.classList.add('commentButtonDiv')
          let btnComments = document.createElement('button');
          btnComments.innerText = 'Comments';
+         btnComments.classList.add('btnComments')
          commentButtonDiv.appendChild(btnComments);
 
 
@@ -109,12 +126,9 @@
 
 
                   }
-              //
+
               })
          }
-
-
-
          postDiv.append(idPostDiv, useridPostDiv, titlePostDiv, bodyPostDiv, commentButtonDiv);
          document.body.appendChild(postDiv);
         }

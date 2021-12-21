@@ -55,6 +55,7 @@ console.log(usersArr)
 
         let detailsLink = document.createElement('a');
         detailsLink.innerText = 'user-details'
+        detailsLink.classList.add('detailsLink')
     detailsLink.href = 'user-details.html?id=' + user.id
 
 

@@ -5,22 +5,30 @@
     <title>user-details</title>
     <style>
         .userInfo {
-            background-color: lavender;
+            background-color: lightskyblue;
             margin: 10px;
             padding: 10px;
 
         }
         .btnDiv {
             text-align: center;
+
         }
+
         .btnPost {
             margin: 10px;
             width: 90%;
             text-align: center;
+            background-color: white;
+        }
+        .btnPost:hover {
+            cursor: pointer;
+            background-color: #fd8d48;
+
         }
         .title {
             max-font-size: 100%;
-            background-color: lightcyan;
+            background-color: #159a9d;
             display: grid;
             grid-template-columns: 230px 230px 230px 230px 230px;
             grid-row-gap: 15px;
@@ -28,16 +36,50 @@
             align-items: flex-end;
         }
         .postDetail {
-          background-color: #51dee1;
-
+          /*background-color: #51dee1;*/
+            font-size: 16px;
+            font-style: italic;
+            text-decoration: none;
+        }
+        .postDetail:hover {
+            cursor: pointer;
+            background-color: cyan;
 
         }
+
         .shortPost {
             width: 160px;
             gap: 15px;
 
             flex-wrap: wrap;
             display: flex;
+        }
+
+        .user {
+            margin-bottom: 10px;
+            background: lightskyblue;
+            border: 1px solid lavender;
+            padding: 10px;
+
+        }
+
+        .address {
+            margin-bottom: 3px;
+            background: #e2f1f1;
+            margin-left: 15px;
+
+
+        }
+
+        .geo {
+            margin-bottom: 3px;
+            margin-left: 15px;
+            background-color: lightgray;
+        }
+        .company {
+            margin-bottom: 3px;
+            background: #e2f1f1;
+            margin-left: 15px;
         }
 
 
@@ -76,29 +118,36 @@
         emailDiv.innerText = `email - ${user.email}`;
 
         let addressDiv = document.createElement('div');
-        addressDiv.classList.add('address');
         addressDiv.innerText='address';
 
                 let cityDiv = document.createElement('div');
                 cityDiv.innerText = `city - ${user.address.city}`;
+                 cityDiv.classList.add('address');
 
                 let streetDiv = document.createElement('div');
                 streetDiv.innerText = `street - ${user.address.street}`;
+                 streetDiv.classList.add('address');
 
                 let suiteDiv = document.createElement('div');
                 suiteDiv.innerText = `suite - ${user.address.suite}`;
+                 suiteDiv.classList.add('address');
 
                 let zipcodeDive = document.createElement('div');
                 zipcodeDive.innerText = `zipcode - ${user.address.zipcode}`;
+                 zipcodeDive.classList.add('address');
 
-                            let geoDiv = document.createElement('div');
-                            geoDiv.classList.add('geo');
-                            geoDiv.innerText = 'geo';
-                            let latDiv = document.createElement('div');
-                            latDiv.innerText = `lat: ${user.address.geo.lat}`;
+                let geoDiv = document.createElement('div');
+                 geoDiv.innerText = 'geo';
+                 geoDiv.classList.add('address');
 
-                                let lngDiv = document.createElement('div');
-                                lngDiv.innerText = `lng: ${user.address.geo.lng}`;
+
+                    let latDiv = document.createElement('div');
+                    latDiv.innerText = `lat: ${user.address.geo.lat}`;
+                    latDiv.classList.add('geo');
+
+                    let lngDiv = document.createElement('div');
+                    lngDiv.innerText = `lng: ${user.address.geo.lng}`;
+                    lngDiv.classList.add('geo');
 
     geoDiv.append(latDiv,lngDiv);
 
@@ -110,14 +159,18 @@
     let companyDiv = document.createElement('div');
     companyDiv.innerText = 'company';
 
+
     let bsCompanyDiv = document.createElement('div');
     bsCompanyDiv.innerText = `bs - ${user.company.bs}`;
+    bsCompanyDiv.classList.add('company');
 
     let catchPhraseCompanyDiv = document.createElement('div');
     catchPhraseCompanyDiv.innerText = `city - ${user.company.catchPhrase}`;
+    catchPhraseCompanyDiv.classList.add('company');
 
     let nameCompanyDiv = document.createElement('div');
     nameCompanyDiv.innerText = `name - ${user.company.name}`;
+    nameCompanyDiv.classList.add('company');
 
     companyDiv.append(bsCompanyDiv,catchPhraseCompanyDiv,nameCompanyDiv)
 
@@ -151,7 +204,7 @@
                 let postLink = document.createElement('a');
                 postLink.innerText = 'post-details';
                 postLink.href = 'post-details.html?id=' + post.id;
-                linkDiv.classList.add('postDetail')
+                postLink.classList.add('postDetail')
 
 
                 linkDiv.appendChild(postLink);
